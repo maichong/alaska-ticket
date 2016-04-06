@@ -19,8 +19,9 @@ export default class TicketService extends alaska.Service {
 
   postLoadModels() {
     const Ticket = this.model('Ticket');
-    this.alaska.main.post('loadAppMiddlewares', function () {
-      this.alaska.app.use(async function (ctx, next) {
+    const alaska = this.alaska;
+    alaska.post('loadMiddlewares', function () {
+      alaska.app.use(async function (ctx, next) {
         if (ctx.method === 'POST' && ctx.request.body._ticket) {
           let ticket = await Ticket.findById(ctx.request.body._ticket);
           if (ticket && ticket.verify(ctx)) {

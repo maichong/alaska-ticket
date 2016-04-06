@@ -5,5 +5,7 @@
  */
 
 export default{
-  prefix: '/ticket'
+  prefix: '/ticket',
+  controllers: false,
+  middlewares: false
 };
