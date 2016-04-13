@@ -22,7 +22,7 @@ export default class TicketService extends alaska.Service {
     const alaska = this.alaska;
     alaska.post('loadMiddlewares', function () {
       alaska.app.use(async function (ctx, next) {
-        if (ctx.method === 'POST' && ctx.request.body._ticket) {
+        if (ctx.method === 'POST' && ctx.request.body && ctx.request.body._ticket) {
           let ticket = await Ticket.findById(ctx.request.body._ticket);
           if (ticket && ticket.verify(ctx)) {
             if (ticket.state) {
