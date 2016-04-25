@@ -16,7 +16,6 @@ export async function create(ctx) {
   };
 }
 
-
 export async function show(ctx) {
   let id = ctx.params.id;
   let ticket = await Ticket.findById(id);
@@ -25,9 +24,7 @@ export async function show(ctx) {
     error: 'Not found'
   };
 
-  if (!ticket || !ticket.verify(ctx)) {
-    return;
-  }
+  if (!ticket || !ticket.verify(ctx)) return;
 
   ctx.body = ticket.data();
 }

@@ -7,13 +7,15 @@
 export default class Ticket extends service.Model {
   static label = 'Ticket';
   static defaultSort = '-createdAt';
-  static defaultColumns = 'title,userId,sessionId,state,createdAt';
+  static defaultColumns = 'title userId sessionId state createdAt';
   static noedit = true;
   static nocreate = true;
+
   static api = {
     show: 1,
     create: 1
   };
+
   static fields = {
     title: {
       label: 'Title',
