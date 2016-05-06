@@ -1,7 +1,11 @@
 {
   "name": "alaska-ticket",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Alaska ticket service",
+  "keywords": [
+    "alaska",
+    "alaska-service"
+  ],
   "main": "lib/alaska-ticket.js",
   "scripts": {
     "build": "babel ./src --out-dir ./lib",
@@ -24,6 +28,6 @@
   },
   "homepage": "https://github.com/maichong/alaska-ticket#readme",
   "peerDependencies": {
-    "alaska": "^0.9.0"
+    "alaska": "^0.9.8"
   }
 }
