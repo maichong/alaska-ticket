@@ -1,16 +1,16 @@
 {
   "name": "alaska-ticket",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Alaska ticket service",
   "keywords": [
     "alaska",
     "alaska-service"
   ],
-  "main": "lib/alaska-ticket.js",
+  "main": "index.js",
   "scripts": {
-    "build": "babel ./src --out-dir ./lib",
-    "watch": "babel ./src --out-dir ./lib -w",
-    "prebuild": "rimraf lib",
+    "build": "babel ./src --out-dir ./",
+    "watch": "babel ./src --out-dir ./ -w",
+    "prebuild": "rimraf lib api controllers config locales middlewares models sleds views",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/maichong/alaska-ticket#readme",
   "peerDependencies": {
-    "alaska": "^0.9.8"
+    "alaska": "^0.10.0"
   }
 }

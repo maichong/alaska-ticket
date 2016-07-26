@@ -4,8 +4,11 @@
  * @author Liang <liang@maichong.it>
  */
 
-export default class Ticket extends service.Model {
+import alaska from 'alaska';
+
+export default class Ticket extends alaska.Model {
   static label = 'Ticket';
+  static icon = 'ticket';
   static defaultSort = '-createdAt';
   static defaultColumns = 'title userId sessionId state createdAt';
   static noedit = true;

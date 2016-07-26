@@ -9,7 +9,7 @@ import alaska from 'alaska';
 /**
  * @class TicketService
  */
-export default class TicketService extends alaska.Service {
+class TicketService extends alaska.Service {
   constructor(options, alaska) {
     options = options || {};
     options.dir = options.dir || __dirname;
@@ -48,3 +48,5 @@ export default class TicketService extends alaska.Service {
     });
   }
 }
+
+export default new TicketService();
